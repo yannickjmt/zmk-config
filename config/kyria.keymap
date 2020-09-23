@@ -4,7 +4,7 @@
 
 #define BASE 0
 #define FNC  1
-// #define NUM  2
+#define NUM  2
 // #define NAV  3
 
 / {
@@ -21,10 +21,10 @@
 	&kp ESC     &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp BKSP
 	&lt FNC TAB &kp A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K    &kp L   &kp SCLN &lt FNC RET
 	&kp LSFT    &kp Z &kp X &kp C &kp V &kp B &none   &kp LCTL          &kp RCTL  &none  &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &mt RSFT SCLN
-	              &kp LGUI &kp LALT &kp LCTL &none   &kp DEL            &kp BKSP &none   &kp SPC &none &kp LGUI
+	              &kp LGUI &kp LALT &kp LCTL &none   &kp DEL            &kp BKSP &mo NUM &kp SPC &none &kp LGUI
 			>;
 
-			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
+			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp M_VOLU M_VOLD>;
 		};
 
 		function_layer {
@@ -40,24 +40,24 @@
 	                         &trans        &trans        &trans           &trans       &trans &trans &trans &trans &trans &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
+			sensor-bindings = <&inc_dec_cp PGUP PGDN &inc_dec_kp PGUP PGDN>;
 		};
 
-// 		num_layer {
-// // ---------------------------------------------------------------------------------------------------------------------------------
-// // | trans |  !  |  +  |  [   |  ]   |  =   |                                          |  %   |  7    |  8    |  9   |   *   | /    |
-// // | #     |  @  |  _  |  (   |  )   |  -   |                                          |  $   |  4    |  5    |  6   |   +   | ---  |
-// // | trans |  \  |  &  |  {   |  }   |  |   |   ---   |  ---    |  |   ---   |  ---    |  0   |  1    |  2    |  3   |   -   |  ^   |
-// //                     | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---   | ---   |
-// 			bindings = <
-// 	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp BKSP
-// 	&kp TAB  &kp A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K    &kp L   &kp SCLN &kp RET
-// 	&kp LSFT &kp Z &kp X &kp C &kp V &kp B &none   &kp LCTL          &kp RCTL  &none  &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp RSFT
-// 	              &kp LGUI &kp LALT &kp LCTL &mo NAV &kp DEL            &kp BKSP &mo NAV &kp SPC &none &kp LGUI
-// 			>;
+		num_layer {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// | `     |  !  |  +  |  [   |  ]   |  =   |                                          |  %   |  7    |  8    |  9   |   *   | /    |
+// | #     |  @  |  _  |  (   |  )   |  -   |                                          |  $   |  4    |  5    |  6   |   +   | ---  |
+// | trans |  \  |  &  |  {   |  }   |  |   |   ---   |  ---    |  |   ---   |  ---    |  0   |  1    |  2    |  3   |   -   |  ^   |
+//                     | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---   | ---   |
+			bindings = <
+	&kp GRAV &kp BANG &kp KPLS  &kp LBKT &kp RBKT &kp EQL                               &kp PRCT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp KMLT &kp KDIV
+	&kp HASH &kp ATSN &kp MINUS &kp LPRN &kp RPRN &kp MINUS                             &kp NUM_4 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp KPLS &none
+	&kp LSFT &kp BSLH &kp AMPS  &kp LCUR &kp RCUR &kp PIPE &none   &trans  &trans &none &kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp KMIN &kp CRRT
+	                       &trans  &trans   &trans         &none   &trans  &trans &none    &trans    &none     &trans
+			>;
 
-// 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
-// 		};
+			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
+		};
 
 // 		nav_layer {
 // // ---------------------------------------------------------------------------------------------------------------------------------

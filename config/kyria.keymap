@@ -24,7 +24,7 @@
 	              &kp LGUI &kp LALT &kp LCTL &mo NAV  &kp DEL            &kp BKSP &mo NUM &kp SPC &none &kp LGUI
 			>;
 
-			sensor-bindings = <&inc_dec_cp LARW RARW &inc_dec_kp M_VOLU M_VOLD>;
+			sensor-bindings = <&inc_dec_kp LARW RARW &inc_dec_cp M_VOLU M_VOLD>;
 		};
 
 		function_layer {
@@ -40,7 +40,7 @@
 	                         &trans        &trans        &trans           &trans       &trans &trans &trans &trans &trans &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp PGUP PGDN &inc_dec_kp PGUP PGDN>;
+			sensor-bindings = <&inc_dec_kp PGUP PGDN &inc_dec_kp PGUP PGDN>;
 		};
 
 		num_layer {

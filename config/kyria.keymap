@@ -35,7 +35,7 @@
 //                     | ---  | ---  | ---  |  ---   |  ---    |  |   ---   |  ---  | ---  | ---   | ---   |
 			bindings = <
 	&trans &kp F2     &cp M_MUTE   &cp M_VOLU   &cp M_STOP   &none                                         &kp F12 &kp F7 &kp F8 &kp F9 &kp PRSC &trans
-	&none  &kp CLCK   &cp M_PREV   &cp M_VOLD   &cp M_NEXT   &none                                         &kp F11 &kp F4 &kp F5 &kp F6 &kp INS  &none
+	&trans &kp CLCK   &cp M_PREV   &cp M_VOLD   &cp M_NEXT   &none                                         &kp F11 &kp F4 &kp F5 &kp F6 &kp INS  &trans
 	&trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 3 &none  &none  &none &kp F10 &kp F1 &kp F2 &kp F3 &trans   &trans
 	                         &trans        &trans        &trans           &trans       &trans &trans &trans &trans &trans &trans
 			>;
@@ -53,7 +53,7 @@
 	&kp GRAV &kp BANG &kp KPLS  &kp LBKT &kp RBKT &kp EQL                               &kp PRCT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp KMLT &kp KDIV
 	&kp HASH &kp ATSN &kp MINUS &kp LPRN &kp RPRN &kp MINUS                             &kp NUM_4 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp KPLS &none
 	&kp LSFT &kp BSLH &kp AMPS  &kp LCUR &kp RCUR &kp PIPE &none   &trans  &trans &none &kp NUM_0 &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp KMIN &kp CRRT
-	                       &trans  &trans   &trans         &none   &trans  &trans &none    &trans    &none     &trans
+	                       &trans  &trans   &trans         &none   &trans  &trans &trans    &trans    &none     &trans
 			>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;

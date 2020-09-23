@@ -36,7 +36,7 @@
 			bindings = <
 	&none    &kp F2     &cp M_MUTE   &cp M_VOLU   &cp M_STOP   &none                                     &kp F12 &kp F7 &kp F8 &kp F9 &kp PRSC &none
 	&none    &kp CLCK   &cp M_PREV   &cp M_VOLD   &cp M_NEXT   &none                                     &kp F11 &kp F4 &kp F5 &kp F6 &kp INS  &none
-	&none    &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none  &none   &none  &none  &kp F10 &kp F1 &kp F2 &kp F3 &trans   &none
+	&none    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none  &none   &none  &none  &kp F10 &kp F1 &kp F2 &kp F3 &trans   &none
 	                         &trans        &trans        &trans             &trans &trans  &trans &trans    &trans &trans &trans
 			>;
 

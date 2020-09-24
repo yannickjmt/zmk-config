@@ -10,7 +10,7 @@
 / {
 
 	left_encoder {
-	    resolution = <2>;
+	    resolution = <1>;
 	};
 
 	keymap {

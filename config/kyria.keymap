@@ -61,7 +61,7 @@
 	                       &trans  &trans   &trans         &none   &trans  &trans &trans    &trans    &none     &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp PGUP PGDN>>;
+			sensor-bindings = <&inc_dec_cp PGUP PGDN>;
 		};
 
 		nav_layer {

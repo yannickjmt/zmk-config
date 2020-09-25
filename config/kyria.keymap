@@ -9,8 +9,8 @@
 
 / {
 
-	left_encoder {
-	    resolution = <1>;
+	left_encoder: encoder_left {
+	    resolution = <2>;
 	};
 
 	keymap {
@@ -45,7 +45,7 @@
 	                         &trans        &trans        &trans           &trans       &trans &trans &trans &trans &trans &trans
 			>;
 
-			sensor-bindings = <&inc_dec_kp PGUP PGDN>;
+			sensor-bindings = <&inc_dec_kp DARW UARW>;
 		};
 
 		num_layer {
@@ -61,7 +61,7 @@
 	                       &trans  &trans   &trans         &none   &trans  &trans &trans    &trans    &none     &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD>;
+			sensor-bindings = <&inc_dec_cp PGUP PGDN>>;
 		};
 
 		nav_layer {

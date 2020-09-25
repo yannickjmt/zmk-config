@@ -7,11 +7,11 @@
 #define NUM  2
 #define NAV  3
 
-/ {
+&left_encoder {
+    resolution = <2>;
+};
 
-	left_encoder: encoder_left {
-	    resolution = <2>;
-	};
+/ {
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -61,7 +61,7 @@
 	                       &trans  &trans   &trans         &none   &trans  &trans &trans    &trans    &none     &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp PGUP PGDN>;
+			sensor-bindings = <&inc_dec_kp PGUP PGDN>;
 		};
 
 		nav_layer {

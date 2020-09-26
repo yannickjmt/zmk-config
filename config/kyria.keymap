@@ -29,7 +29,7 @@
 	              &kp LGUI &kp LALT &kp LCTL &mo NAV  &kp DEL            &kp BKSP &mo NUM &kp SPC &none &kp LGUI
 			>;
 
-			sensor-bindings = <&inc_dec_mt MOD_LALT UARW MOD_LALT DARW>;
+			sensor-bindings = <&inc_dec_cp MOD_LALT UARW MOD_LALT DARW>;
 		};
 
 		function_layer {

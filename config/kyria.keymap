@@ -12,7 +12,16 @@
 };
 
 / {
-
+	behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping_term_ms = <125>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+	};
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -24,9 +33,9 @@
 //                     | ENC  |Alt/En| Ctrl |  Nav    |   del   |  |   bksp  |  num    | spc  | Iso   | ENC2  |
 			bindings = <
 	&kp ESC     &kp Q      &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp BKSP
-	&lt FNC TAB &mt LSFT A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K    &kp L   &mt RSFT QUOT &lt FNC RET
+	&hm FNC TAB &mt LSFT A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K    &kp L   &mt RSFT QUOT &hm FNC RET
 	&kp LSFT    &kp Z      &kp X &kp C &kp V &kp B &none   &kp LCTL          &kp RCTL  &none  &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &mt RSFT SCLN
-	              &kp LGUI &kp LALT &kp LCTL &mo NAV  &kp DEL            &kp BKSP &kp SPC &mo NUM  &none &kp LGUI
+	              &kp LGUI &kp LALT &kp LCTL &mo NAV  &kp DEL            &kp BKSP  &mo NUM &kp SPC &none &kp LGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp PGUP PGDN>;

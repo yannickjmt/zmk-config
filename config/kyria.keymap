@@ -61,13 +61,13 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | `     |  !  |  +  |  [   |  ]   |  =   |                                          |  %   |  7    |  8    |  9   |   *   | /    |
 // | #     |  @  |  _  |  (   |  )   |  -   |                                          |  $   |  4    |  5    |  6   |   +   | ---  |
-// | trans |  \  |  &  |  {   |  }   |  |   |   ---   |  ---    |  |   ---   |  ---    |  0   |  1    |  2    |  3   |   -   |  ^   |
+// | trans |  \  |  &  |  {   |  }   |  |   |   ---   |  ---    |  |   ---   |  ---    |  ^   |  1    |  2    |  3   |   -   | ---  |
 //                     | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---   | ---   |
 			bindings = <
 	&kp GRAV &kp BANG &kp KPLS  &kp LBKT &kp RBKT &kp EQL                               &kp PRCT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp KMLT &kp KDIV
 	&kp HASH &kp ATSN &kp MINUS &kp LPRN &kp RPRN &kp MINUS                             &kp NUM_4 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp KPLS &none
-	&kp LSFT &kp BSLH &kp AMPS  &kp LCUR &kp RCUR &kp PIPE &none   &trans  &trans &none &kp DOT   &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp KMIN &kp CRRT
-	                       &trans  &trans   &trans         &none   &trans  &trans &trans    &trans   &kp NUM_0    &trans
+	&kp LSFT &kp BSLH &kp AMPS  &kp LCUR &kp RCUR &kp PIPE &none   &trans  &trans &none &kp CRRT  &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp KMIN &trans
+	                       &trans  &trans   &trans         &none   &trans  &trans &trans    &kp NUM_0  &kp DOT    &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp PGUP PGDN>;

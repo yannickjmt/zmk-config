@@ -7,13 +7,13 @@
 #define FNC  1
 #define NUM  2
 #define NAV  3
-#define NTAB LC(PG_UP)
-#define PTAB LC(PG_DN)
+#define PTAB LC(PG_UP)
+#define NTAB LC(PG_DN)
 #define NWIN LA(TAB)
 #define PWIN LS(LA(TAB))
 #define XSLV LA(LC(V))
-#define NDESK LC(LG(RIGHT))
-#define PDESK LC(LG(LEFT))
+#define PDESK LC(LG(RIGHT))
+#define NDESK LC(LG(LEFT))
 
 &left_encoder {
     resolution = <2>;

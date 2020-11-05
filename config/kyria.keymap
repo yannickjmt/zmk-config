@@ -1,11 +1,14 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define FNC  1
 #define NUM  2
 #define NAV  3
+#define NTAB LC(TAB)
+#define PTAB LS(LC(TAB))
 
 &left_encoder {
     resolution = <2>;
@@ -89,7 +92,7 @@
 // | ---  | --- | F2  | F3   | F5   | excel|   ---   |  ---    |  |   ---   |  ---    |      | Predk| ---   | NxDk |   -   |---   |
 //                    | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---  | ---   |
 			bindings = <
-	&trans &trans   &trans    &trans   &trans    &trans                              &kp PG_UP &kp HOME &kp UP   &kp END   &cp C_AC_SCROLL_UP &trans
+	&trans &kp PTAB &kp NTAB  &trans   &trans    &trans                              &kp PG_UP &kp HOME &kp UP   &kp END   &cp C_AC_SCROLL_UP &trans
 	&trans &kp LGUI &kp LSHFT &kp LALT &kp LCTRL &kp K_APP                           &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &cp C_AC_SCROLL_DOWN &trans
 	&trans &trans   &kp F2    &kp F3   &kp F5    &trans &trans &trans  &trans &trans &trans   &trans   &trans   &trans   &trans &trans
 	                       &trans  &trans   &trans      &trans &trans  &trans &trans    &trans    &none     &trans

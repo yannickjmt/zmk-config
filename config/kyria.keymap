@@ -54,13 +54,13 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | none  |  F2 | mute| V+   | stp  |   @  |                                       | F12  |  F7   |  F8   |  F9  | Print| none |
 // | none  | caps| Prev| V-   | Next |   @p |                                       | F11  |  F4   |  F5   |  F6  | Ins  | none |
-// | none  | /Ble| Ble0| Ble1 | Ble2 | Ble3 |  ---   |  ---    |  |   ---   |  ---  | F10  |  F1   |  F2   |  F3  | ---  | none |
+// | none  | /Ble| Ble0| Ble1 | Ble2 | Ble3 |  Ble4  |  ---    |  |   ---   |  ---  | F10  |  F1   |  F2   |  F3  | ---  | none |
 //                     | ---  | ---  | ---  |  ---   |  ---    |  |   ---   |  ---  | ---  | ---   | ---   |
 			bindings = <
-	&trans &kp F2     &cp C_MUTE   &cp C_VOL_UP &cp C_STOP   &none                                         &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN &trans
-	&trans &kp CAPS   &cp C_PREV   &cp C_VOL_DN &cp C_NEXT   &none                                         &kp F11 &kp F4 &kp F5 &kp F6 &kp INS  &trans
-	&trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none  &none  &none &kp F10 &kp F1 &kp F2 &kp F3 &trans   &trans
-	                         &trans        &trans        &trans           &trans       &trans &trans &trans &trans &trans &trans
+	&trans &kp F2     &cp C_MUTE   &cp C_VOL_UP &cp C_STOP   &none                                                &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN &trans
+	&trans &kp CAPS   &cp C_PREV   &cp C_VOL_DN &cp C_NEXT   &none                                                &kp F11 &kp F4 &kp F5 &kp F6 &kp INS  &trans
+	&trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG  &none  &none &kp F10 &kp F1 &kp F2 &kp F3 &trans   &trans
+	                         &trans        &trans        &trans           &trans       &trans        &trans &trans &trans &trans &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp UP DOWN>;
@@ -73,10 +73,10 @@
 // | ~     |  \  |  &  |  {   |  }   |  |   |   ---   |  ---    |  |   ---   |  ---    |  ^   |  1    |  2    |  3   |   -   | ---  |
 //                     | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---   | ---   |
 			bindings = <
-	&kp GRAVE &kp EXCL &kp PLUS  &kp LBKT &kp RBKT &kp EQUAL                             &kp CARET &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MULTIPLY &kp KP_DIVIDE
-	&kp HASH  &kp AT   &kp UNDER &kp LPAR &kp RPAR &kp MINUS                             &kp PRCNT &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS &none
-	&kp TILDE &kp BSLH &kp AMPS  &kp LBRC &kp RBKT &kp PIPE &trans &trans  &trans &trans &kp DLLR  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MINUS &trans
-	                       &trans  &trans   &trans          &trans &trans  &trans &trans    &kp KP_N1  &kp DOT    &trans
+	&kp GRAVE &kp EXCL &kp PLUS  &kp LBKT &kp RBKT &kp EQUAL                             &kp CARET &kp N7 &kp N8 &kp N9 &kp KP_MULTIPLY &kp KP_DIVIDE
+	&kp HASH  &kp AT   &kp UNDER &kp LPAR &kp RPAR &kp MINUS                             &kp PRCNT &kp N4 &kp N5 &kp N6 &kp KP_PLUS &none
+	&kp TILDE &kp BSLH &kp AMPS  &kp LBRC &kp RBKT &kp PIPE &trans &trans  &trans &trans &kp DLLR  &kp N1 &kp N2 &kp N3 &kp KP_MINUS &trans
+	                       &trans  &trans   &trans          &trans &trans  &trans &trans    &kp N0  &kp DOT    &trans
 			>;
 
 			sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_DN>;

@@ -4,9 +4,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
-#define FNC  1
-#define NUM  2
-#define NAV  3
+#define ENC2 1
+#define ENC3 2
+#define FNC  3
+#define NUM  4
+#define NAV  5
 #define PTAB LC(PG_UP)
 #define NTAB LC(PG_DN)
 #define NWIN LA(TAB)
@@ -14,6 +16,9 @@
 #define XSLV LA(LC(V))
 #define PDESK LC(LG(RIGHT))
 #define NDESK LC(LG(LEFT))
+#define LR_DOWN LA(DOWN)
+#define LR_UP LA(UP)
+
 
 &left_encoder {
     resolution = <2>;
@@ -52,10 +57,32 @@
 	&kp ESC     &kp Q       &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I     &kp O   &kp P         &kp BSPC
 	&lt FNC TAB &hm LSHFT A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K     &kp L   &hm RSHFT SQT &lt FNC RET
 	&kp LSHFT   &kp Z       &kp X &kp C &kp V &kp B &none   &kp LCTRL         &kp RCTRL &none  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH      &mt RSHFT SEMI
-	              &kp LGUI &lt LALT RET  &kp LCTRL &mo NAV  &kp DEL            &kp BKSP &mo NUM &kp SPC &none &kp LGUI
+	              &tog ENC2 &lt LALT RET  &kp LCTRL &mo NAV  &kp DEL            &kp BKSP &mo NUM &kp SPC &none &kp LGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+		};
+
+		enc1_layer {
+			bindings = <
+	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
+	                       &tog ENC3  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
+			>;
+
+			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP>;
+		};
+
+		enc2_layer {
+			bindings = <
+	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
+	                       &tog BASE  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
+			>;
+
+			sensor-bindings = <&inc_dec_kp LR_DOWN LR_UP>;
 		};
 
 		function_layer {
@@ -87,7 +114,7 @@
 	                       &trans  &trans   &trans          &trans &trans  &trans &trans    &kp N0  &kp DOT    &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&inc_dec_kp LC(LEFT) LC(RIGHT)>;
 		};
 
 		nav_layer {
@@ -103,7 +130,7 @@
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &none     &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP>;
 		};
 	};
 };

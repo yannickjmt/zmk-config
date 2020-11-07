@@ -68,10 +68,10 @@
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
-	                       &tog ENC3  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
+	                       &tog ENC3  &trans   &trans        &trans &trans  &trans &trans    &trans    &kp LALT     &tog ENC2
 			>;
 
-			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP>;
+			sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
 		};
 
 		enc2_layer {
@@ -79,7 +79,7 @@
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
-	                       &tog BASE  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
+	                       &kp LGUI  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &tog ENC3
 			>;
 
 			sensor-bindings = <&inc_dec_kp LR_DOWN LR_UP>;
@@ -98,7 +98,7 @@
 	                         &trans        &trans        &trans           &trans       &trans        &trans &trans &trans &trans &trans
 			>;
 
-			sensor-bindings = <&inc_dec_kp UP DOWN>;
+			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP>;
 		};
 
 		num_layer {

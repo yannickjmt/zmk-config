@@ -110,7 +110,7 @@
 			bindings = <
 	&kp GRAVE &kp EXCL &kp PLUS  &kp LBKT &kp RBKT &kp EQUAL                             &kp CARET &kp N7 &kp N8 &kp N9 &kp KP_MULTIPLY &kp KP_DIVIDE
 	&kp HASH  &kp AT   &kp UNDER &kp LPAR &kp RPAR &kp MINUS                             &kp PRCNT &kp N4 &kp N5 &kp N6 &kp KP_PLUS &none
-	&kp TILDE &kp BSLH &kp AMPS  &kp LBRC &kp RBKT &kp PIPE &trans &trans  &trans &trans &kp DLLR  &kp N1 &kp N2 &kp N3 &kp KP_MINUS &trans
+	&kp TILDE &kp BSLH &kp AMPS  &kp LBRC &kp RBRC &kp PIPE &trans &trans  &trans &trans &kp DLLR  &kp N1 &kp N2 &kp N3 &kp KP_MINUS &trans
 	                       &trans  &trans   &trans          &trans &trans  &trans &trans    &kp N0  &kp DOT    &trans
 			>;
 

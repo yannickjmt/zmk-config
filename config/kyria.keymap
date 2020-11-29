@@ -50,8 +50,8 @@
 	    bindings = <&kp>, <&kp>;
 	  };
 
-	  ms: mod_tap_osl {
-			compatible = "zmk,behavior-hold-tap";
+	  mx: mod_tap_osl {
+			compatible = "zmk,behavior-hold-tap,behavior-momentary-layer,behavior-sticky-key";
 			label = "MOD_TAP_OSL";
 			#binding-cells = <2>;
 			flavor = "hold-preferred";
@@ -73,7 +73,7 @@
 	&kp ESC     &kp Q       &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I     &kp O   &kp P         &kp BSPC
 	&lt FNC TAB &hm LSHFT A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K     &kp L   &hm RSHFT SQT &lt FNC RET
 	&kp LSHFT   &kp Z       &kp X &kp C &kp V &kp B &none   &kp LCTRL         &kp RCTRL &none  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH      &mt RSHFT SEMI
-	              &tog ENC2 &mt LALT RET  &kp LCTRL &mo NAV &kp DEL            &kp BKSP &mo NUM &kp SPC &sl OSL &kp LGUI
+	              &tog ENC2 &mt LALT RET  &kp LCTRL &mx NAV OSL &kp DEL            &kp BKSP &mo NUM &kp SPC &sl OSL &kp LGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;

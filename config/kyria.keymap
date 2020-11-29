@@ -51,7 +51,7 @@
 	  };
 
 	  mx: mod_tap_osl {
-			compatible = "zmk,behavior-hold-tap,behavior-momentary-layer,behavior-sticky-key";
+			compatible = "zmk,behavior-hold-tap";
 			label = "MOD_TAP_OSL";
 			#binding-cells = <2>;
 			flavor = "hold-preferred";

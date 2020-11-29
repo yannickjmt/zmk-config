@@ -19,8 +19,6 @@
 #define NDESK LC(LG(LEFT))
 #define LR_DOWN LA(DOWN)
 #define LR_UP LA(UP)
-#define OS123 &sl OSL
-
 
 &left_encoder {
     resolution = <2>;
@@ -51,6 +49,15 @@
 	    flavor = "balanced";
 	    bindings = <&kp>, <&kp>;
 	  };
+
+	  ms: mod_tap_osl {
+			compatible = "zmk,behavior-hold-tap";
+			label = "MOD_TAP_OSL";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping_term_ms = <200>;
+			bindings = <&kp>, <&sl>;
+		};
 	};
 
 	keymap {
@@ -66,7 +73,7 @@
 	&kp ESC     &kp Q       &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I     &kp O   &kp P         &kp BSPC
 	&lt FNC TAB &hm LSHFT A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K     &kp L   &hm RSHFT SQT &lt FNC RET
 	&kp LSHFT   &kp Z       &kp X &kp C &kp V &kp B &none   &kp LCTRL         &kp RCTRL &none  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH      &mt RSHFT SEMI
-	              &tog ENC2 &mt LALT RET  &kp LCTRL &lt NAV OS123  &kp DEL            &kp BKSP &mo NUM &kp SPC &sl OSL &kp LGUI
+	              &tog ENC2 &mt LALT RET  &kp LCTRL &ms NAV OSL  &kp DEL            &kp BKSP &mo NUM &kp SPC &sl OSL &kp LGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;

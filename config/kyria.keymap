@@ -25,10 +25,10 @@
 };
 
 &sk {
-	release-after-ms = <300>;
+	release-after-ms = <1000>;
 };
 &sl {
-	release-after-ms = <300>;
+	release-after-ms = <1000>;
 };
 
 / {
@@ -50,9 +50,9 @@
 	    bindings = <&kp>, <&kp>;
 	  };
 
-	  mx: mod_tap_osl {
+	  mx: layer_tap_osl {
 			compatible = "zmk,behavior-hold-tap";
-			label = "MOD_TAP_OSL";
+			label = "LAYER_TAP_OSL";
 			#binding-cells = <2>;
 			flavor = "hold-preferred";
 			tapping_term_ms = <200>;
@@ -152,7 +152,7 @@
 		osl_layer {
 			bindings = <
 	&trans &trans &trans    &trans &trans    &trans                              &trans &trans &trans &trans &trans &trans
-	&trans &trans &sk LSHFT &trans &sk LCTRL &trans                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &sk LSHFT &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans    &trans &trans    &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
 			>;

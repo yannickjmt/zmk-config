@@ -73,7 +73,7 @@
 	&kp ESC     &kp Q       &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I     &kp O   &kp P         &kp BSPC
 	&lt FNC TAB &hm LSHFT A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K     &kp L   &hm RSHFT SQT &lt FNC RET
 	&kp LSHFT   &kp Z       &kp X &kp C &kp V &kp B &none   &kp LCTRL         &kp RCTRL &none  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH      &mt RSHFT SEMI
-	              &tog ENC2 &mt LALT RET  &kp LCTRL &mx NAV OSL &kp DEL            &kp BKSP &mo NUM &kp SPC &sl OSL &kp LGUI
+	              &tog ENC2 &mt LALT RET  &kp LCTRL &mx NAV OSL &kp DEL            &kp BKSP &mo NUM &kp SPC &none &kp LGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
@@ -151,9 +151,9 @@
 
 		osl_layer {
 			bindings = <
-	&trans &trans &trans    &trans &trans    &trans                              &trans &trans &trans &trans &trans &trans
-	&trans &trans &sk LSHFT &trans &sk LCTRL &trans                              &trans &trans &trans &trans &trans &trans
-	&trans &trans &trans    &trans &trans    &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
+	&trans &trans   &trans    &trans   &trans    &trans                              &trans &trans &trans &trans &trans &trans
+	&trans &sk LGUI &sk LSHFT &sk LALT &sk LCTRL &sk K_APP                           &trans &trans &trans &trans &trans &trans
+	&trans &trans   &trans    &trans   &trans    &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
 			>;
 

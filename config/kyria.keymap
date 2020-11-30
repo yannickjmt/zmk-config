@@ -25,7 +25,7 @@
 };
 
 &sk {
-	release-after-ms = <1000>;
+	release-after-ms = <400>;
 };
 &sl {
 	release-after-ms = <1000>;
@@ -152,7 +152,7 @@
 		osl_layer {
 			bindings = <
 	&trans &trans &trans    &trans &trans    &trans                              &trans &trans &trans &trans &trans &trans
-	&trans &trans &sk LSHFT &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &sk LSHFT &trans &sk LCTRL &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans    &trans &trans    &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
 			>;

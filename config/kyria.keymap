@@ -19,28 +19,21 @@
 #define NDESK LC(LG(LEFT))
 #define LR_DOWN LA(DOWN)
 #define LR_UP LA(UP)
+#define LR_ZOOM_IN LC(LS(EQUAL))
+#define LR_ZOOM_OUT LC(LS(MINUS))
+#define IDENT_LEFT LC(LEFT_BRACKET)
+#define IDENT_RIGHT LC(RIGHT_BRACKET)
+#define MOVE_TEXT_LEFT LC(LA(K))
+#define MOVE_TEXT_RIGHT LC(LA(L))
 
-&left_encoder {
-    resolution = <2>;
-};
+&left_encoder { resolution = <2>; };
+&right_encoder { resolution = <2>; };
 
-&sk {
-	release-after-ms = <1000>;
-};
-&sl {
-	release-after-ms = <1000>;
-};
+&sk { release-after-ms = <1000>; };
+&sl { release-after-ms = <1000>; };
 
 / {
 	behaviors {
-    // hm: homerow_mods {
-    //   compatible = "zmk,behavior-hold-tap";
-    //   label = "HOMEROW_MODS";
-    //   #binding-cells = <2>;
-    //   tapping_term_ms = <200>;
-    //   flavor = "tap-preferred";
-    //   bindings = <&kp>, <&cp>;
-    // };
 		hm: homerow_mods {
 	    compatible = "zmk,behavior-hold-tap";
 	    label = "homerow mods";
@@ -58,6 +51,214 @@
 			tapping_term_ms = <200>;
 			bindings = <&mo>, <&sl>;
 		};
+
+//		l_e_aig: l_e_aig {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_é";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N9>, <&kp RET>;
+//		};
+//
+//		l_e_grv: l_e_grv {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_è";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N8>, <&kp RET>;
+//		};
+//
+//		l_e_crc: l_e_crc {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_ê";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp E>, <&kp A>, <&kp RET>;
+//		};
+//
+//		l_e_trm: l_e_trm {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_ë";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp E>, <&kp B>, <&kp RET>;
+//		};
+//
+//		l_a_grv: l_a_grv {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_à";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N0>, <&kp RET>;
+//		};
+//
+//		l_a_crc: l_a_crc {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_â";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N2>, <&kp RET>;
+//		};
+//
+//		l_c_cdl: l_c_cdl {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_ç";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N7>, <&kp RET>;
+//		};
+//
+//		l_c_eur: l_c_eur {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_€";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N2>, <&kp N0>, <&kp A>, <&kp C>, <&kp RET>;
+//		};
+//
+//		l_c_bht: l_c_bht {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_฿";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp E>, <&kp N3>, <&kp F>, <&kp RET>;
+//		};
+//
+//		l_u_grv: l_u_grv {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_ù";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp F>, <&kp N9>, <&kp RET>;
+//		};
+//
+//		l_o_crc: l_o_crc {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_ô";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp F>, <&kp N4>, <&kp RET>;
+//		};
+//
+//		l_deg: l_deg {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_°";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp B>, <&kp N0>, <&kp RET>;
+//		};
+//
+//		l_mu: l_mu {
+//			compatible = "zmk,behavior-macro";
+//			label = "LINUX_mu";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp LC(LS(U))>, <&kp N0>, <&kp N0>, <&kp B>, <&kp N5>, <&kp RET>;
+//		};
+//
+//		w_e_aig: w_e_aig {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_é";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N9>, <&kp RET>;
+//		};
+//
+//		w_e_grv: w_e_grv {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_è";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N8>, <&kp RET>;
+//		};
+//
+//		w_e_crc: w_e_crc {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_ê";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp E>, <&kp A>, <&kp RET>;
+//		};
+//
+//		w_e_trm: w_e_trm {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_ë";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp E>, <&kp B>, <&kp RET>;
+//		};
+//
+//		w_a_grv: w_a_grv {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_à";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N0>, <&kp RET>;
+//		};
+//
+//		w_a_crc: w_a_crc {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_â";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N0>, <&kp RET>;
+//		};
+//
+//		w_c_cdl: w_c_cdl {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_ç";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp E>, <&kp N7>, <&kp RET>;
+//		};
+//
+//		w_c_eur: w_c_eur {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_€";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N2>, <&kp N0>, <&kp A>, <&kp C>, <&kp RET>;
+//		};
+//
+//		w_c_bht: w_c_bht {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_฿";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp E>, <&kp N3>, <&kp F>, <&kp RET>;
+//		};
+//
+//		w_u_grv: w_u_grv {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_ù";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp F>, <&kp N9>, <&kp RET>;
+//		};
+//
+//		w_o_crc: w_o_crc {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_ô";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp F>, <&kp N4>, <&kp RET>;
+//		};
+//
+//		w_mu: w_mu {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_mu";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp B>, <&kp N5>, <&kp RET>;
+//		};
+//
+//		w_deg: w_deg {
+//			compatible = "zmk,behavior-macro";
+//			label = "WIN_°";
+//			#binding-cells = <0>;
+//			sleep = <1>;
+//			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp B>, <&kp N0>, <&kp RET>;
+//		};
 	};
 
 	keymap {
@@ -69,6 +270,7 @@
 // | TAB/FN|  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   '   |ent/fn|
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   | ---     |  ctrl   |  |   ctrl  |  blank  |  N   |  M    |  ,    |  .   |   /   |shft/;|
 //                     | ENC  |Alt/En| Ctrl |  Nav    |   del   |  |   bksp  |  num    | spc  | Iso   | ENC2  |
+// encoder : volume up/down //// ctrl left/ ctrl right
 			bindings = <
 	&kp ESC     &kp Q       &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I     &kp O   &kp P         &kp BSPC
 	&lt FNC TAB &hm LSHFT A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K     &kp L   &hm RSHFT SQT &lt FNC RET
@@ -76,29 +278,29 @@
 	              &tog ENC2 &mt LALT RET  &kp LCTRL &mx NAV OSL &kp DEL            &kp BKSP &mo NUM &kp SPC &sl OSL &kp LGUI
 			>;
 
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP &inc_dec_kp LC(LEFT) LC(RIGHT)>;
 		};
 
-		enc1_layer {
+		enc1_useless_layer {
 			bindings = <
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
 	                       &tog ENC3  &trans   &trans        &trans &trans  &trans &trans    &trans    &kp LALT     &tog ENC2
 			>;
-
-			sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
+			// encoder : tab / shift tab |||| ctrl left/ ctrl right
+			sensor-bindings = <&inc_dec_kp LS(TAB) TAB &inc_dec_kp LC(LEFT) LC(RIGHT)>;
 		};
 
-		enc2_layer {
+		enc2_lightroom_layer {
 			bindings = <
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
 	                       &kp LGUI  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &tog ENC3
 			>;
-
-			sensor-bindings = <&inc_dec_kp LR_DOWN LR_UP>;
+			// encoder lightroom cursor |||| lightroom zoom in and out
+			sensor-bindings = <&inc_dec_kp LR_DOWN LR_UP &inc_dec_cp LR_ZOOM_OUT LR_ZOOM_IN>;
 		};
 
 		function_layer {
@@ -107,6 +309,8 @@
 // | none  | caps| Prev| V-   | Next |   @p |                                       | F11  |  F4   |  F5   |  F6  | Ins  | none |
 // | none  | /Ble| Ble0| Ble1 | Ble2 | Ble3 |  Ble4  |  ---    |  |   ---   |  ---  | F10  |  F1   |  F2   |  F3  | ---  | none |
 //                     | ---  | ---  | ---  |  ---   |  ---    |  |   ---   |  ---  | ---  | ---   | ---   |
+// encoder : volume up/down //// brightness up/down
+
 			bindings = <
 	&trans &kp F2     &kp C_MUTE   &kp C_VOL_UP &kp C_STOP   &none                                                &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN &trans
 	&trans &kp CAPS   &kp C_PREV   &kp C_VOL_DN &kp C_NEXT   &none                                                &kp F11 &kp F4 &kp F5 &kp F6 &kp INS  &trans
@@ -114,7 +318,7 @@
 	                         &trans        &trans        &trans           &trans       &trans        &trans &trans &trans &trans &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP>;
+			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP &inc_dec_cp C_BRI_DN C_BRI_UP>;
 		};
 
 		num_layer {
@@ -122,7 +326,9 @@
 // | `     |  !  |  +  |  [   |  ]   |  =   |                                          |  %   |  7    |  8    |  9   |   *   | /    |
 // | #     |  @  |  _  |  (   |  )   |  -   |                                          |  $   |  4    |  5    |  6   |   +   | ---  |
 // | ~     |  \  |  &  |  {   |  }   |  |   |   ---   |  ---    |  |   ---   |  ---    |  ^   |  1    |  2    |  3   |   -   | ---  |
-//                     | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---   | ---   |
+//                     | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    |  0   |  .    | ---   |
+// encoder :  identation left right || hard to reach
+
 			bindings = <
 	&kp GRAVE &kp EXCL &kp PLUS  &kp LBKT &kp RBKT &kp EQUAL                             &kp CARET &kp N7 &kp N8 &kp N9 &kp KP_MULTIPLY &kp KP_DIVIDE
 	&kp HASH  &kp AT   &kp UNDER &kp LPAR &kp RPAR &kp MINUS                             &kp PRCNT &kp N4 &kp N5 &kp N6 &kp KP_PLUS &none
@@ -130,7 +336,7 @@
 	                       &trans  &trans   &trans          &trans &trans  &trans &trans    &kp N0  &kp DOT    &trans
 			>;
 
-			sensor-bindings = <&inc_dec_kp LC(LEFT) LC(RIGHT)>;
+			sensor-bindings = <&inc_dec_kp IDENT_LEFT IDENT_RIGHT>;
 		};
 
 		nav_layer {
@@ -139,6 +345,8 @@
 // | ---  | Win | Shft| alt  | ctrl | app  |                                          | Pgdw | Left |  Down | Right| ScrDn | ---  |
 // | ---  | --- | F2  | F3   | F5   | excel|   ---   |  ---    |  |   ---   |  ---    |      | Predk| ---   | NxDk |   -   |---   |
 //                    | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---  | ---   |
+// encoder :  hard to reach || move text left right
+
 			bindings = <
 	&trans &kp PTAB &kp NTAB  &kp PWIN &kp NWIN  &trans                                &kp PG_UP &kp HOME &kp UP   &kp END   &kp K_SCROLL_UP &trans
 	&trans &kp LGUI &kp LSHFT &kp LALT &kp LCTRL &kp K_APP                             &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp K_SCROLL_DOWN &trans
@@ -146,8 +354,32 @@
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &none     &trans
 			>;
 
-			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP>;
+			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP &inc_dec_kp MOVE_TEXT_LEFT MOVE_TEXT_RIGHT>;
 		};
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// | *** |  â  |  é  |  è  |  €  | *** |                           | *** |  ù  | *** |  ô  |  °  | *** |
+// | *** |  à  |  ê  |  ë  | *** | *** |                           | *** | *** | *** | *** | *** | *** |
+// | *** | *** | *** |  ç  | *** |  ฿  | ***  | *** |  | *** | *** | *** |  µ  | *** | *** | *** | *** |
+//                   | *** | *** | *** | ***  | *** |  | *** | *** | *** | *** | *** |
+//		unicode_layer_linux {
+//			bindings = <
+//	&none &l_a_crc &l_e_aig &l_e_grv &l_c_eur &none                             &kp Y &l_u_grv &none &l_o_crc &l_deg &none
+//	&none &l_a_grv &l_e_crc &l_e_trm &none    &none                             &none &none    &none &none    &none &none
+//	&none &none    &none    &l_c_cdl &none    &l_c_bht &none &none  &none &none &none &l_mu    &none &none    &none &none
+//	                       &none  &none   &none        &none &none  &none &none    &none    &none     &none
+//			>;
+//
+//		};
+//		unicode_layer_windows {
+//			bindings = <
+//	&none &w_a_crc &w_e_aig &w_e_grv &w_c_eur &none                             &kp Y &w_u_grv &none &w_o_crc &w_deg &none
+//	&none &w_a_grv &w_e_crc &w_e_trm &none    &none                             &none &none    &none &none    &none &none
+//	&none &none    &none    &w_c_cdl &none    &w_c_bht &none &none  &none &none &none &w_mu    &none &none    &none &none
+//	                       &none  &none   &none        &none &none  &none &none    &none    &none     &none
+//			>;
+//
+//		};
 
 		osl_layer {
 			bindings = <
@@ -156,8 +388,6 @@
 	&trans &trans   &trans    &trans   &trans    &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
 			>;
-
-			sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
 		};
 	};
 };

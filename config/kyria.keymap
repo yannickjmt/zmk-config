@@ -10,17 +10,17 @@
 #define NUM  4
 #define NAV  5
 #define OSL 6
-#define PTAB LGUI(LA(LEFT))
-#define NTAB LGUI(LA(RIGHT))
+#define PTAB LG(LA(LEFT))
+#define NTAB LG(LA(RIGHT))
 #define NWIN LA(TAB)
 #define PWIN LS(LA(TAB))
 // #define XSLV LA(LC(V))
-#define DESK1 LGUI(N1)
-#define DESK2 LGUI(N2)
-#define DESK3 LGUI(N3)
-#define MHOME LGUI(LEFT)
-#define MEND LGUI(RIGHT)
-#define NXTWO LGUI(G)
+#define DESK1 LG(N1)
+#define DESK2 LG(N2)
+#define DESK3 LG(N3)
+#define MHOME LG(LEFT)
+#define MEND LG(RIGHT)
+#define NXTWO LG(G)
 
 #define LR_DOWN LA(DOWN)
 #define LR_UP LA(UP)

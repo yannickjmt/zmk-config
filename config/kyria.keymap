@@ -18,9 +18,11 @@
 #define DESK1 LC(N1)
 #define DESK2 LC(N2)
 #define DESK3 LC(N3)
+#define DESK4 LC(N4)
 #define MHOME LG(LEFT)
 #define MEND LG(RIGHT)
 #define NXTWO LG(G)
+#define PSCRN LG(LS(N4))
 
 #define LR_DOWN LA(DOWN)
 #define LR_UP LA(UP)
@@ -348,14 +350,14 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | ---  | Tab-| Tab+| win+ | win- | ---  |                                          | Pgup | Home |  Up   | End  | ScrUp | ---  |
 // | ---  | Ctrl| Shft| alt  | cmd  | ---  |                                          | Pgdw | Left |  Down | Right| ScrDn | ---  |
-// | ---  | --- | F2  | nextw| F5   | ---  |   ---   |  ---    |  |   ---   |  ---    |      | desk1| desk2 | desk3|   -   |---   |
+// | ---  | --- | F2  | nextw| F5   | ---  |   ---   |  ---    |  |   ---   |  ---    |      | desk1| desk2 | desk3| desk4 |---   |
 //                    | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---  | ---   |
 // encoder :  hard to reach || move text left right
 
 			bindings = <
 	&trans &kp PTAB  &kp NTAB  &kp PWIN &kp NWIN  &trans                                &kp PG_UP &kp MHOME &kp UP   &kp MEND   &kp K_SCROLL_UP &trans
 	&trans &kp LCTRL &kp LSHFT &kp LALT &kp LGUI  &trans                                &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp K_SCROLL_DOWN &trans
-	&trans &trans   &kp F2    &kp NXTWO  &kp F5    &trans   &trans &trans  &trans &trans  &trans   &kp DESK1 &kp DESK2   &kp DESK3 &trans &trans
+	&trans &trans   &kp F2    &kp NXTWO  &kp F5    &trans   &trans &trans  &trans &trans  &trans   &kp DESK1 &kp DESK2 &kp DESK3 &kp DESK4 &trans
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &none     &trans
 			>;
 

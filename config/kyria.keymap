@@ -77,11 +77,12 @@
       label = "MAC_é";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp E &kp N9>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -90,11 +91,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_è";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp E &kp N8>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -103,11 +105,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_ê";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp E &kp A>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -116,11 +119,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_ë";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp E &kp B>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -129,11 +133,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_à";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp E &kp N0>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -142,11 +147,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_â";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp E &kp N2>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -155,11 +161,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_ç";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp E &kp N7>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -168,11 +175,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_€";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N2 &kp N0 &kp A &kp C>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -181,11 +189,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_฿";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp E &kp N3 &kp F>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -194,11 +203,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_ù";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp F &kp N9>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -207,11 +217,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_ô";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp F &kp N4>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -220,11 +231,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_°";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp B &kp N0>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };
@@ -233,11 +245,12 @@
     	compatible = "zmk,behavior-macro";
     	label = "MAC_mu";
     	#binding-cells = <0>;
-      wait-ms = <40>;
-      tap-ms = <40>;
+      wait-ms = <30>;
+      tap-ms = <10>;
       bindings
         = <&macro_press &kp LALT>
         , <&macro_tap &kp N0 &kp N0 &kp B &kp N5>
+        , <&macro_wait_time 10>
         , <&macro_release &kp LALT>
         ;
     };

@@ -9,7 +9,8 @@
 #define FNC  3
 #define NUM  4
 #define NAV  5
-#define OSL 6
+#define UNI  6
+#define OSL  7
 #define PTAB LG(LA(LEFT))
 #define NTAB LG(LA(RIGHT))
 #define NWIN LA(TAB)
@@ -40,6 +41,15 @@
 &sl { release-after-ms = <1000>; };
 
 / {
+
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+        if-layers = <4 5>;
+        then-layer = <6>;
+    };
+  };
+
 	behaviors {
 		hm: homerow_mods {
 	    compatible = "zmk,behavior-hold-tap";
@@ -387,6 +397,15 @@
 //			>;
 //
 //		};
+
+		unicode_layer {
+			bindings = <
+	&trans &trans &trans &trans &trans &kp B                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
+	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
+			>;
+		};
 
 		osl_layer {
 			bindings = <

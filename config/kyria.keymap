@@ -492,7 +492,7 @@
 	                       &tog ENC3  &trans   &trans        &trans &trans  &trans &trans    &trans    &kp LALT     &tog ENC2
 			>;
 			// encoder : tab / shift tab |||| ctrl left/ ctrl right
-			sensor-bindings = <&inc_dec_kp LS(TAB) TAB &inc_dec_kp LC(LEFT) LC(RIGHT)>;
+			sensor-bindings = <&inc_dec_kp LC(RIGHT) LC(LEFT) &inc_dec_kp LC(LEFT) LC(RIGHT)>;
 		};
 
 		enc2_lightroom_layer {

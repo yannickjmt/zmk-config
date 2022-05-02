@@ -50,9 +50,6 @@ jobs:
         id: west-build-kyria-left
         with:
           args: 'build "-s zmk/app -b nice_nano -- -DSHIELD=kyria_left -DZMK_CONFIG=/github/workspace/config"'
-      - name: Kyria DTS File
-        if: ${{ always() }}
-        run: cat -n build/zephyr/nice_nano.dts.pre.tmp
       - name: Kyria Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2

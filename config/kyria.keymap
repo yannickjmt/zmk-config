@@ -52,7 +52,7 @@
     };
   };
 
-	behaviors {
+  behaviors {
 		hm: homerow_mods {
 	    compatible = "zmk,behavior-hold-tap";
 	    label = "homerow mods";
@@ -70,6 +70,22 @@
 			tapping_term_ms = <200>;
 			bindings = <&mo>, <&sl>;
 		};
+	};
+
+  macros {
+    m_e_aig: m_e_aig {
+      label = "MAC_é";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <40>;
+      tap-ms = <40>;
+      bindings
+        = <&macro_press &kp LALT>
+        , <&macro_tap &kp N0 &kp N0 &kp E &kp N9>
+        , <&macro_release &kp LALT>
+        ;
+    };
+	};
 
 //		l_e_aig: l_e_aig {
 //			compatible = "zmk,behavior-macro";
@@ -278,7 +294,6 @@
 //			sleep = <1>;
 //			bindings = <&kp RA(U)>, <&kp N0>, <&kp N0>, <&kp B>, <&kp N0>, <&kp RET>;
 //		};
-	};
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -402,7 +417,7 @@
 
 		unicode_layer {
 			bindings = <
-	&trans &trans &trans &trans &trans &kp B                              &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &m_e_aig &trans &kp B                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans                              &trans &trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans

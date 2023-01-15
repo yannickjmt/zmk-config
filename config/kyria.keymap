@@ -9,8 +9,8 @@
 #define FNC  3
 #define NUM  4
 #define NAV  5
-#define UNI  6
-#define OSL  7
+// #define UNI  6
+// #define OSL  7
 #define PTAB LG(LA(LEFT))
 #define NTAB LG(LA(RIGHT))
 #define NWIN LA(TAB)
@@ -39,18 +39,18 @@
 &left_encoder { resolution = <2>; };
 &right_encoder { resolution = <2>; };
 
-&sk { release-after-ms = <1000>; };
-&sl { release-after-ms = <1000>; };
+// &sk { release-after-ms = <1000>; };
+// &sl { release-after-ms = <1000>; };
 
 / {
 
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-        if-layers = <4 5>;
-        then-layer = <6>;
-    };
-  };
+  // conditional_layers {
+  //   compatible = "zmk,conditional-layers";
+  //   tri_layer {
+  //       if-layers = <4 5>;
+  //       then-layer = <6>;
+  //   };
+  // };
 
   behaviors {
 		hm: homerow_mods {
@@ -62,14 +62,14 @@
 	    bindings = <&kp>, <&kp>;
 	  };
 
-	  mx: layer_tap_osl {
-			compatible = "zmk,behavior-hold-tap";
-			label = "LAYER_TAP_OSL";
-			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			tapping_term_ms = <200>;
-			bindings = <&mo>, <&sl>;
-		};
+	  // mx: layer_tap_osl {
+		// 	compatible = "zmk,behavior-hold-tap";
+		// 	label = "LAYER_TAP_OSL";
+		// 	#binding-cells = <2>;
+		// 	flavor = "hold-preferred";
+		// 	tapping_term_ms = <200>;
+		// 	bindings = <&mo>, <&sl>;
+		// };
 	};
 
   macros {
@@ -478,7 +478,7 @@
 	&kp ESC     &kp Q       &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I     &kp O   &kp P         &kp BSPC
 	&lt FNC TAB &hm LSHFT A &kp S &kp D &kp F &kp G                                            &kp H &kp J  &kp K     &kp L   &hm RSHFT SQT &lt FNC RET
 	&kp LSHFT   &kp Z       &kp X &kp C &kp V &kp B &none   &kp LCTRL         &kp RCTRL &none  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH      &mt RSHFT SEMI
-	              &tog ENC2 &mt LALT RET  &kp LGUI &mx NAV OSL &kp DEL            &kp BKSP &mo NUM &kp SPC &kp LCTRL &sl OSL
+	              &tog ENC2 &mt LALT RET  &kp LGUI &mo NAV &kp DEL            &kp BKSP &mo NUM &kp SPC &kp LCTRL &none
 			>;
 
 			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP &inc_dec_kp LC(LEFT) LC(RIGHT)>;
@@ -594,13 +594,13 @@
 //
 //		};
 
-		osl_layer {
-			bindings = <
-	&trans &trans   &trans    &trans   &trans    &trans                              &trans &trans &trans &trans &trans &trans
-	&trans &sk LGUI &sk LSHFT &sk LALT &sk LCTRL &sk K_APP                           &trans &trans &trans &trans &trans &trans
-	&trans &trans   &trans    &trans   &trans    &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
-	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
-			>;
-		};
+	// 	osl_layer {
+	// 		bindings = <
+	// &trans &trans   &trans    &trans   &trans    &trans                              &trans &trans &trans &trans &trans &trans
+	// &trans &sk LGUI &sk LSHFT &sk LALT &sk LCTRL &sk K_APP                           &trans &trans &trans &trans &trans &trans
+	// &trans &trans   &trans    &trans   &trans    &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
+	//                        &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &trans     &trans
+	// 		>;
+	// 	};
 	};
 };

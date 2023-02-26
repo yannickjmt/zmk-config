@@ -11,6 +11,7 @@
 #define NAV  5
 // #define UNI  6
 // #define OSL  7
+#define SAMAPP LG(GRAVE)
 #define PTAB LG(LA(LEFT))
 #define NTAB LG(LA(RIGHT))
 #define NWIN LA(TAB)
@@ -551,9 +552,9 @@
 // encoder :  hard to reach || move text left right
 
 			bindings = <
-	&trans &kp PTAB  &kp NTAB  &kp PWIN &kp NWIN  &trans                                &kp PG_UP &kp MHOME &kp UP   &kp MEND   &kp K_SCROLL_UP &trans
-	&trans &kp LCTRL &kp LSHFT &kp LALT &kp LGUI  &trans                                &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp K_SCROLL_DOWN &trans
-	&trans &trans   &trans  &kp NXTWO &kp SUBL1 &trans &trans &trans  &trans &trans  &trans   &kp DESK1 &kp DESK2 &kp DESK3 &kp DESK4 &trans
+	&kp SAMAPP &kp PTAB &kp NTAB &kp PWIN &kp NWIN  &trans                                &kp PG_UP &kp MHOME &kp UP   &kp MEND   &kp K_SCROLL_UP &trans
+	&trans     &kp LCTRL &kp LSHFT &kp LALT &kp LGUI  &trans                                &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp K_SCROLL_DOWN &trans
+	&trans     &trans   &trans  &kp NXTWO &kp SUBL1 &trans &trans &trans  &trans &trans  &trans   &kp DESK1 &kp DESK2 &kp DESK3 &kp DESK4 &trans
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &none     &trans
 			>;
 

@@ -24,8 +24,8 @@
 #define MEND LG(RIGHT)
 #define NXTWO LG(G)
 #define PSCRN LG(LS(N4))
-#define SUBL0 LC(LA(L))
-#define SUBL1 LC(LA(R))
+//paste from sublime history cmd option v
+#define SUBL1 LG(LA(V))
 
 #define LR_DOWN LA(DOWN)
 #define LR_UP LA(UP)

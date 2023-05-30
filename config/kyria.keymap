@@ -27,6 +27,7 @@
 #define PRTSC LG(LS(N4))
 //paste from sublime history cmd option v
 #define SUBL1 LG(LA(V))
+#define PASTE LG(V)
 
 #define LR_DOWN LA(DOWN)
 #define LR_UP LA(UP)
@@ -547,14 +548,14 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | ---  | Tab-| Tab+| win+ | win- | ---  |                                          | Pgup | Home |  Up   | End  | ScrUp | ---  |
 // | ---  | Ctrl| Shft| alt  | cmd  | ---  |                                          | Pgdw | Left |  Down | Right| ScrDn | ---  |
-// | ---  | --- |---  | nextw|subl1 | ---  |   ---   |  ---    |  |   ---   |  ---    |      | desk1| desk2 | desk3| desk4 |---   |
+// | ---  | --- |---  | nextw|subl1 | paste|   ---   |  ---    |  |   ---   |  ---    |      | desk1| desk2 | desk3| desk4 |---   |
 //                    | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---  | ---   |
 // encoder :  hard to reach || move text left right
 
 			bindings = <
-	&kp SAMAPP &kp PTAB &kp NTAB &kp PWIN &kp NWIN  &trans                                &kp PG_UP &kp MHOME &kp UP   &kp MEND   &kp K_SCROLL_UP &trans
-	&trans     &kp LCTRL &kp LSHFT &kp LALT &kp LGUI  &trans                                &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp K_SCROLL_DOWN &trans
-	&trans     &trans   &trans  &kp NXTWO &kp SUBL1 &trans &trans &trans  &trans &trans  &trans   &kp DESK1 &kp DESK2 &kp DESK3 &kp DESK4 &trans
+	&kp SAMAPP &kp PTAB &kp NTAB   &kp PWIN  &kp NWIN  &trans                                  &kp PG_UP &kp MHOME &kp UP   &kp MEND   &kp K_SCROLL_UP &trans
+	&trans     &kp LCTRL &kp LSHFT &kp LALT  &kp LGUI  &trans                                  &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp K_SCROLL_DOWN &trans
+	&trans     &trans   &trans     &kp NXTWO &kp SUBL1 &kp PASTE &trans &trans  &trans &trans  &trans   &kp DESK1 &kp DESK2 &kp DESK3 &kp DESK4 &trans
 	                       &trans  &trans   &trans        &trans &trans  &trans &trans    &trans    &none     &trans
 			>;
 
